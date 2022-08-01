@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#4d0000] text-gray-300;
+    }
+    
+  }
 html,
 body {
   padding: 0;
@@ -13,6 +23,54 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.p-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-banner-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 999;
+}
+
+.hero-banner-image{
+  width: 100vw;
+  height: 50vh;
+  object-position: center;
+  object-fit: fill;
+  left: 0;
+  top: 0;
+
+}
+
+.hero-banner-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5f5;
+  
 }
 
 @media (prefers-color-scheme: dark) {
